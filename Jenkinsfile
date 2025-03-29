@@ -5,14 +5,20 @@ pipeline {
     }
     stages {
         stage('Build') {
-            bat 'mvn clean package'
+            steps {
+                bat 'mvn clean package'
+            }
         }
         stage('Test') {
-            bat 'mvn test'
-            echo 'No tests'
+            steps {
+                bat 'mvn test'
+                echo 'Tests done'
+            }
         }
         stage('Deploy') {
-            bat 'echo app will be deployed'
+            steps {
+                echo 'App will be deployed'
+            }
         }
     }
     post {
