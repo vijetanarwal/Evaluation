@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'app build'
+                bat 'npm run build'
             }
         }
         stage('Test') {
