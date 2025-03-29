@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'build successful'
+                bat 'npm run build'
             }
         }
         stage('Test') {
@@ -32,3 +32,5 @@ pipeline {
         }
     }
 }
+
+
