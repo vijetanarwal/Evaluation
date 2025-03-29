@@ -6,7 +6,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'npm run build'
                 echo 'build successful'
             }
         }
