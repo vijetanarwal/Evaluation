@@ -6,12 +6,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'echo buildd project'
+                bat 'npm run build'
             }
         }
         stage('Test') {
             steps {
-                echo 'Tests done'
+                echo 'No tests defined'
             }
         }
         stage('Deploy') {
